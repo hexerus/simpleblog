@@ -6,7 +6,7 @@
         @foreach ($posts as $post)
             <div class="card">
                 <div class="card-body">
-                    <h3>{{$post->title}}</h3>
+                    <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
                     <small>Written on {{$post->created_at}}</small>
                 </div>
             </div>
@@ -14,4 +14,6 @@
     @else
         <p>No posts found.</p>
     @endif
+    <br>
+    <a href="/posts/create" class="btn btn-primary">Create Post</a>
 @endsection
